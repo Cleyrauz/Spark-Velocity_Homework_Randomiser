@@ -63,8 +63,17 @@ public class Controller {
             Student student = students.get(0);
             HashMap<String, Object> model = new HashMap<>();
             model.put("student", student);
-            return new ModelAndView(model, "randomName.vtl");
+            return new ModelAndView(model, "");
         }, velocityTemplateEngine);
+
+//
+//        get("/persons", (req, res) -> {
+//            HashMap<String, Object> model = new HashMap<>();
+//            model.put("persons", persons);
+//            model.put("template", "persons.vtl");
+//            model.put("heading", "All Students");
+//            return new ModelAndView(model, "layout.vtl");
+//        }, velocityTemplateEngine);
 
     }
 }
