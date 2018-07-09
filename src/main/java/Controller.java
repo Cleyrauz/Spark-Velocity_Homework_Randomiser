@@ -58,22 +58,13 @@ public class Controller {
         students.add(craig);
         students.add(greg);
 
-        get("/one", (req, res) -> {
-            Collections.shuffle(students);
-            Student student = students.get(0);
+        get("/students", (req, res) -> {
             HashMap<String, Object> model = new HashMap<>();
-            model.put("student", student);
-            return new ModelAndView(model, "");
+            model.put("students", students);
+            model.put("template", "students.vtl");
+            model.put("heading", "All Students");
+            return new ModelAndView(model, "layout.vtl");
         }, velocityTemplateEngine);
-
-//
-//        get("/persons", (req, res) -> {
-//            HashMap<String, Object> model = new HashMap<>();
-//            model.put("persons", persons);
-//            model.put("template", "persons.vtl");
-//            model.put("heading", "All Students");
-//            return new ModelAndView(model, "layout.vtl");
-//        }, velocityTemplateEngine);
 
     }
 }
