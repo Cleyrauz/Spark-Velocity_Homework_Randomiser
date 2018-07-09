@@ -1,7 +1,12 @@
 import models.Student;
+import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+
+import static spark.Spark.get;
 
 public class Controller {
 
@@ -53,13 +58,13 @@ public class Controller {
         students.add(craig);
         students.add(greg);
 
-//        get("/one", (req, res) -> {
-//            Collections.shuffle(students);
-//            Student student = students.get(0);
-//            HashMap<String, Object> model = new HashMap<>();
-//            model.put("student", student);
-//            return new ModelAndView(model, "randomName.vtl");
-//        }, velocityTemplateEngine);
+        get("/one", (req, res) -> {
+            Collections.shuffle(students);
+            Student student = students.get(0);
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("student", student);
+            return new ModelAndView(model, "randomName.vtl");
+        }, velocityTemplateEngine);
 
     }
 }
