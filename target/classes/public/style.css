@@ -1,0 +1,53 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #daebe8;
+}
+
+.container {
+    min-height: 100%;
+    justify-content: center;
+
+}
+
+header{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1em;
+    text-decoration: underline;
+}
+p{
+    font-size: 2.5em;
+    margin-top: 3em;
+    margin-left: 2em;
+}
+
+.selectedName{
+    text-align: center;
+    font-size: 0.5em;
+}
+
+form{
+    margin: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 1.5em
+
+
+}
+
+input{
+    background-color: #f4a688;
+    color: white;
+}
+
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
